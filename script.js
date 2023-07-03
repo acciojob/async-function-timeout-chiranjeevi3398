@@ -12,17 +12,18 @@ const outputDiv = document.getElementById('output');
 async function showMessageWithDelay () { // Get the text and delay values from the user: inputs
 
 const text = textInput.value; 
-  const delay = parseInt(delayInput.value, 10);
+  const delay = parseInt(delayInput.value,10);
 
-Validate the inputs if (!text || isNaN(delay) || delay <= 0) { 
-outputDiv.innerText = 'Invalid input':
+//Validate the inputs 
+  if (!text || isNaN(delay) || delay <= 0) { 
+outputDiv.innerText = 'Invalid input';
 return;
 }
 
 // Wait for the specified delay
 
 await new Promise(resolve => setTimeout(resolve, delay));
-outputDiv. innerText=text;
+outputDiv.innerText=text;
 // Display the message on the webpage outputDiv.innerText = text;
 
 }
